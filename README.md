@@ -45,10 +45,24 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 
 ### 2. Single/Multi-Node Cluster
 
-#### Master and Worker Node Setup: Do these following steps in both nodes
+#### Master and Worker Node Setup: Do these below following steps in both nodes to create Spark Cluster
 
 ```bash
-wget https://archive.apache.org/dist/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz
-tar -xzf spark-3.3.2-bin-hadoop3.tgz
-sudo mv spark-3.3.2-bin-hadoop3 /opt/spark
+1. Create Virtual Env in your desired directory.
+2. Activate Env and do pip install --upgrade pip in the terminal.
+3. Then in the terminal do: pip install pyspark==3.3.2 (For Standalone Cluster)
+4. For multiple node Cluster: 
+      i. wget https://archive.apache.org/dist/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz
+     ii. tar -xzf spark-3.3.2-bin-hadoop3.tgz
+    iii. sudo mv spark-3.3.2-bin-hadoop3 /opt/spark
+
+5. On only Master node do that:
+     i.  cp /opt/spark/conf/spark-env.sh.template /opt/spark/conf/spark-env.sh
+         nano /opt/spark/conf/spark-env.sh
+
+    ii.  Add the below two lines in Nano file:    export SPARK_MASTER_HOST= <master-ip address> (e.g, 172.20.251.25)
+                                                  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
+             
+       
 
