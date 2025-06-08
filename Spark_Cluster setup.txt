@@ -1,0 +1,97 @@
+Requirements:  i.  Python 3.10
+              ii.  Java 21 (8 or later versions are allowed)
+              iii. ML related Libraries.
+
+
+
+
+
+
+
+## Steps To Create Spark Cluster. 
+
+
+
+
+1. Create Virtual Env in your desired directory
+2. Activate Env and do pip install --upgrade pip
+3. pip install pyspark==3.3.2 (For Standalone Cluster)
+
+4. For multiple node Cluster:
+
+
+   For Master node and Worker node do these steps: 
+      i. wget https://archive.apache.org/dist/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz
+      ii. tar -xzf spark-3.3.2-bin-hadoop3.tgz
+          sudo mv spark-3.3.2-bin-hadoop3 /opt/spark
+
+      iii. echo '
+           export SPARK_HOME=/opt/spark
+           export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+           export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+           ' >> ~/.bashrc
+
+           source ~/.bashrc
+
+
+
+5. On only Master node do that:
+
+      i. cp /opt/spark/conf/spark-env.sh.template /opt/spark/conf/spark-env.sh
+         nano /opt/spark/conf/spark-env.sh
+         
+     ii. Add the below two lines in Nano file:  
+
+         export SPARK_MASTER_HOST= <master-ip address> (e.g, 172.20.251.25)
+         export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+         
+         
+     iii. In Terminal run that:  cp /opt/spark/conf/workers.template /opt/spark/conf/workers
+
+          nano /opt/spark/conf/workers
+          
+          then add ip list of worker nodes on this nano file(if there is localhost, replace by master node ip and add all the worker node ip addresses)
+          
+          (e.g., 172.20.251.22
+                 172.20.251.25 )
+
+
+
+6. On master node run this: 
+
+                   $SPARK_HOME/sbin/start-master.sh  or $SPARK_HOME/sbin/start-master.sh --host 0.0.0.0
+
+                   for stop replace 'start' by 'stop'
+
+ 
+        ---------  then check on websites : http://172.20.252.53:8080(by_dafault) (Replace it by http://<master_ip>:8080)
+                   
+                   
+                   If you connect with another port no then follow the below steps:
+                   i. export SPARK_MASTER_WEBUI_PORT=9090
+                   ii. $SPARK_HOME/sbin/start-master.sh
+
+                   
+7. Choose another computer for Worker node and find ip address
+8. Follow 1, 2, 3 and 4.
+
+
+
+9. Now follow the below steps:
+    i. which spark-submit (Optional)
+    ii. Set SPARK_HOME Permanently To make it permanent, add the following lines to ~/.bashrc (for normal users) or ~/.bash_profile (for login shells):  (Optional)
+
+        echo 'export SPARK_HOME=/opt/spark' >> ~/.bashrc
+        echo 'export PATH=$SPARK_HOME/bin:$SPARK_HOME/sbin:$PATH' >> ~/.bashrc   
+        source ~/.bashrc
+        
+
+    iii. Start Worker Node:  $SPARK_HOME/sbin/start-worker.sh spark://<Master Node IP Address>:7077 (For Temporary)
+                             sbin/start-worker.sh spark://172.20.252.53:7077 (For Permanent) #(Optional)
+         
+10. Check the website to check the status of Worker node or Cluster.   
+
+11. Keep the dataset on the Env Directory (Same_Location) on both Worker and Master Node. (Because there is no common File System e,g., HDFS)
+
+12. Finally Run the ML Model:   $SPARK_HOME/bin/spark-submit  --master spark://172.20.252.53:7077  clustering.py (Replace ip address by Master Node ip address.)
+      
