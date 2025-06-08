@@ -45,7 +45,7 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 
 ### 2. Single/Multi-Node Cluster
 
-#### Master and Worker Node Setup:
+#### Master and Worker Node Setup: Do these following steps in both nodes
 
 ```bash
 wget https://archive.apache.org/dist/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz
