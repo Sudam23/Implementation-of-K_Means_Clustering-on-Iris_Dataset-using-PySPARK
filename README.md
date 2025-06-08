@@ -54,7 +54,15 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 4. For multiple node Cluster: 
       i. wget https://archive.apache.org/dist/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz
      ii. tar -xzf spark-3.3.2-bin-hadoop3.tgz
-    iii. sudo mv spark-3.3.2-bin-hadoop3 /opt/spark
+         sudo mv spark-3.3.2-bin-hadoop3 /opt/spark
+    iii. echo '
+           export SPARK_HOME=/opt/spark
+           export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+           export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+           ' >> ~/.bashrc
+
+           source ~/.bashrc
+
 
 5. On only Master node do that:
      i.  cp /opt/spark/conf/spark-env.sh.template /opt/spark/conf/spark-env.sh
@@ -63,6 +71,5 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
     ii.  Add the below two lines in Nano file:    export SPARK_MASTER_HOST= <master-ip address> (e.g, 172.20.251.25)
                                                   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
-             
-       
+   iii.           
 
