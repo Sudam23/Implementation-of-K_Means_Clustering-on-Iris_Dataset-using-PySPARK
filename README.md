@@ -1,1 +1,1 @@
-# K_Means_Clustering on Iris_Dataset using PySPARK
+# Distributed KMeans Clustering on Iris Dataset using PySpark
