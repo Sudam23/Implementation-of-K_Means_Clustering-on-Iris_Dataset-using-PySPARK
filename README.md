@@ -51,7 +51,7 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 1. Create Virtual Env in your desired directory.
 2. Activate Env and do pip install --upgrade pip in the terminal.
 3. Then in the terminal do: pip install pyspark==3.3.2 (For Standalone Cluster)
-4. For multiple node Cluster: 
+4. For multiple node Cluster, download and install Spark:
       i. wget https://archive.apache.org/dist/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz
      ii. tar -xzf spark-3.3.2-bin-hadoop3.tgz
          sudo mv spark-3.3.2-bin-hadoop3 /opt/spark
@@ -64,15 +64,15 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
            source ~/.bashrc
 
 
-5. On only Master node do that:
+5. On only Master node do that to configure Master:
      i.  cp /opt/spark/conf/spark-env.sh.template /opt/spark/conf/spark-env.sh
          nano /opt/spark/conf/spark-env.sh
 
     ii.  Add the below two lines in Nano file:    export SPARK_MASTER_HOST= <master-ip address> (e.g, 172.20.251.25)
                                                   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
-   iii.  In Terminal run that:  cp /opt/spark/conf/workers.template /opt/spark/conf/workers
-                                nano /opt/spark/conf/workers
+   iii.  In Terminal run that to configure Workers:  cp /opt/spark/conf/workers.template /opt/spark/conf/workers
+                                                     nano /opt/spark/conf/workers
           
          then add ip list of worker nodes on this nano file(if there is localhost, replace by master node ip and add all the worker node ip addresses)
          (e.g., 172.20.251.22
@@ -87,7 +87,6 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 11. Keep the dataset on the Env Directory (Same_Location) on both Worker and Master Node. (Because there is no common File System e,g., HDFS)
 12. Finally Run the ML Model:   $SPARK_HOME/bin/spark-submit  --master spark://172.20.252.53:7077  clustering.py (Replace ip address by Master Node ip address.)
 
-
 -----
-
-
+````
+### 3. Visit "http://<MASTER_IP>:8080" in your browser to check the Spark UI and check the worker status on the Spark master UI.
