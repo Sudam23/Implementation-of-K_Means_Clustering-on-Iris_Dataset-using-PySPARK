@@ -30,7 +30,7 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 - `clustering.py` – PySpark script for clustering.
 - `iris_dataset.csv` – Input dataset.
 - `Spark_Cluster setup.txt` – Step-by-step guide to configure a Spark standalone cluster.
-- `Java_Configuration.txt`  - Step to configure Java in Linux Env.
+- `Java_Configuration.txt`  – Step to configure Java in Linux Env.
 
 ---
 
