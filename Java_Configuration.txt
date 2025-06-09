@@ -1,0 +1,20 @@
+ Step 1: Install Java 11
+        1. sudo apt update
+           sudo apt install openjdk-11-jdk -y
+           
+        2. java -version
+        
+        3. Add this to ~/.bashrc or ~/.zshrc:
+                export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+                export PATH=$JAVA_HOME/bin:$PATH   
+                source ~/.bashrc
+                
+        4. Set Java 11 as Default (if multiple versions installed)
+           
+            sudo update-alternatives --config java        
+        
+  Note:    If Java--version is not changed 
+        
+           Do- i. nano ~/.bashrc
+               ii Command-out  java 21
+               iii. source ~/.bashrc
