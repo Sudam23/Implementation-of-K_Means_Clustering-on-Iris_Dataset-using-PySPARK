@@ -94,4 +94,5 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 
 ## 🚀 How to Run the Project
 - Place clustering.py and iris_dataset.csv in the same directory on all nodes (Master and Workers).
-- From the Master Node, execute the job using:  $SPARK_HOME/bin/spark-submit --master spark://<MASTER_IP>:7077 clustering.py
+- From the Master Node, execute the job using:
+-     $SPARK_HOME/bin/spark-submit --master spark://<MASTER_IP>:7077 clustering.py
