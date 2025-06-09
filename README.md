@@ -71,5 +71,17 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
     ii.  Add the below two lines in Nano file:    export SPARK_MASTER_HOST= <master-ip address> (e.g, 172.20.251.25)
                                                   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
-   iii.           
+   iii.  In Terminal run that:  cp /opt/spark/conf/workers.template /opt/spark/conf/workers
+                                nano /opt/spark/conf/workers
+          
+         then add ip list of worker nodes on this nano file(if there is localhost, replace by master node ip and add all the worker node ip addresses)
+         (e.g., 172.20.251.22
+                172.20.251.25 )          
+6. On master node run this:   $SPARK_HOME/sbin/start-master.sh  or $SPARK_HOME/sbin/start-master.sh --host 0.0.0.0
+   for stop replace 'start' by 'stop'
 
+7.  Choose another computer for Worker node and find ip address.
+8.  Follow 1, 2, 3 and 4.
+9.  Check the website to check the status of Worker node or Cluster.
+10. Keep the dataset on the Env Directory (Same_Location) on both Worker and Master Node. (Because there is no common File System e,g., HDFS)
+11. Finally Run the ML Model:   $SPARK_HOME/bin/spark-submit  --master spark://172.20.252.53:7077  clustering.py (Replace ip address by Master Node ip address.)
