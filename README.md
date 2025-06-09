@@ -91,7 +91,7 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 
 -----
 ````
-### 3. Visit "http://<MASTER_IP>:8080" in your browser to check the Spark UI and check the worker status on the Spark master UI.
+### 3. Visit ````http://<MASTER_IP>:8080```` in your browser to check the Spark UI and check the worker status on the Spark master UI.
 
 ## 🚀 How to Run the Project
 - Place clustering.py and iris_dataset.csv in the same directory on all nodes (Master and Workers).
