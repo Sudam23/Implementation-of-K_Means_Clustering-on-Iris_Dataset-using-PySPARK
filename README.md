@@ -94,7 +94,25 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 
 ## 🚀 How to Run the Project
 - Place clustering.py and iris_dataset.csv in the same directory on all nodes (Master and Workers).
-- From the Master Node, execute the job using:
+- From the Master Node, execute the job using below code:
 -     $SPARK_HOME/bin/spark-submit --master spark://<MASTER_IP>:7077 clustering.py
 
+## 📈 Output
+- Prints Silhouette scores for cluster counts from 2 to 9.
+- Automatically determines optimal k.
+- Displays 3D scatter plot showing clustered data.
+- Shows cluster size breakdown in terminal.
+  
+## 🧠 Learning Outcomes
+- Understanding Spark cluster setup manually.
+- Distributed execution of MLlib clustering algorithms.
+- Evaluating clustering performance using Silhouette Score.
+- Visualizing high-dimensional data in 3D space.
+
+## 📌 Notes
+- The dataset must be present locally on every node (no shared HDFS).
+- Ensure IP configuration and environment paths are consistent across all machines.
+
+## 🖥️ Sample Visualization
+> Added screenshots of the silhouette score plot or 3D scatter plot here.
  
