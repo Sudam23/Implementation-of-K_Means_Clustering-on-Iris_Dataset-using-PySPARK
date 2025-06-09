@@ -1,3 +1,4 @@
+
 # Distributed KMeans Clustering on Iris Dataset using PySpark
 
 This project demonstrates how to apply the KMeans clustering algorithm to the Iris dataset in a **distributed computing environment** using **Apache Spark** (PySpark). It includes full setup instructions for deploying a Spark standalone cluster and running the ML pipeline with optimal cluster count selection using the **Silhouette Score**.
@@ -90,3 +91,6 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 -----
 ````
 ### 3. Visit "http://<MASTER_IP>:8080" in your browser to check the Spark UI and check the worker status on the Spark master UI.
+
+## 🚀 How to Run the Project
+- 
