@@ -85,3 +85,8 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 9.  Check the website to check the status of Worker node or Cluster.
 10. Keep the dataset on the Env Directory (Same_Location) on both Worker and Master Node. (Because there is no common File System e,g., HDFS)
 11. Finally Run the ML Model:   $SPARK_HOME/bin/spark-submit  --master spark://172.20.252.53:7077  clustering.py (Replace ip address by Master Node ip address.)
+
+
+-----
+
+
