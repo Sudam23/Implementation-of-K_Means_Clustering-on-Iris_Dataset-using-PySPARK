@@ -115,4 +115,15 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 
 ## 🖥️ Sample Visualization
 > Added screenshots of the silhouette score plot or 3D scatter plot here.
+
+
+## 👨‍💻 Author
+- **Sudam Kumar Paul**  
+MSc Big Data Analytics | RKMVERI 
+- **Kanan Pandit**  
+MSc Big Data Analytics | RKMVERI
+
+## 📬 Contact
+For queries or improvements, feel free to open an issue or pull request.
+
  
