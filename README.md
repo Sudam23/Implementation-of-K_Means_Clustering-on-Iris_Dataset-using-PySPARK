@@ -31,7 +31,7 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 - `iris_dataset.csv` – Input dataset.
 - `Spark_Cluster setup.txt` – Step-by-step guide to configure a Spark standalone cluster.
 - `Java_Configuration.txt`  – Step to configure Java in Linux Env.
-
+- `DML_Spark.pdf` - Final academic project report
 ---
 
 ## ⚙️ Cluster Setup
@@ -96,7 +96,7 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 ## 🚀 How to Run the Project
 - Place clustering.py and iris_dataset.csv in the same directory on all nodes (Master and Workers).
 - From the Master Node, execute the job using below code:
--     $SPARK_HOME/bin/spark-submit --master spark://<MASTER_IP>:7077 clustering.py
+   `  $SPARK_HOME/bin/spark-submit --master spark://<MASTER_IP>:7077 clustering.py  `
 
 ## 📈 Output
 - Prints Silhouette scores for cluster counts from 2 to 9.
