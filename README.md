@@ -118,6 +118,24 @@ This project demonstrates how to apply the KMeans clustering algorithm to the Ir
 ## 🖥️ Sample Visualization
 > Added screenshots of the silhouette score plot or 3D scatter plot here.
 
+## 🙏 Acknowledgements
+
+Special thanks to:
+
+**Champak Kumar Dutta**  
+Assistant Professor, Department of Data Science  
+RKMVERI, Belur Math, West Bengal  
+
+For his guidance, mentorship, and continuous encouragement.
+
+## 📜 License
+
+This project is licensed under the **Academic Use Only License**.
+
+- ✅ You are free to use, modify, and distribute this work **for academic, research, and educational purposes only**.
+- ❌ Commercial use, redistribution, or integration into proprietary products is **strictly prohibited** without prior written permission.
+
+If you wish to use this project beyond academic contexts, please contact the authors for licensing terms.
 
 ## 👨‍💻 Author
 - **Sudam Kumar Paul**  
@@ -128,4 +146,14 @@ MSc Big Data Analytics | RKMVERI
 ## 📬 Contact
 For queries or improvements, feel free to open an issue or pull request.
 
- 
+**Kanan Pandit**  
+🌐 [Portfolio](https://kananpanditportfolio.netlify.app/)  
+✉️ kananpandit02@gmail.com  
+
+**Sudam Paul**  
+🌐 [Portfolio](https://sudam23.github.io/My_Portfolio/)  
+✉️ 2002sudam@gmail.com  
+
+**Institution**  
+Ramakrishna Mission Vivekananda Educational and Research Institute  
+📍 Belur Math, Howrah, West Bengal   
